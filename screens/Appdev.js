@@ -1,7 +1,8 @@
 import React from 'react';
 import {Text, View, Button, FlatList, StyleSheet, Image, SafeAreaView, Dimensions} from 'react-native';
 import {AppList} from '../data/Appdev'
-import {HorizontalList} from '../components/ListComponents'
+import {HorizontalList} from '../components/ListComponents';
+import {Navbar} from '../components/Navbar';
 
 class Appdev extends React.Component{
 
@@ -12,6 +13,7 @@ class Appdev extends React.Component{
     {
         return(
             <SafeAreaView style={styles.container}>
+                <Navbar toggleHandler={this.props.navigation.openDrawer} content="Mobile"/>
                <HorizontalList data={AppList}/>
             </SafeAreaView>     
             );

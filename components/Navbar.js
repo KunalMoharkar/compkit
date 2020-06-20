@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     text:{
         color:'white',
         fontSize:30,
+        fontFamily:'Roboto',
     },
     container:{
         display:'flex',

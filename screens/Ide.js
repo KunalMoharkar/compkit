@@ -1,7 +1,8 @@
 import React from 'react';
 import {Text, View, Button, FlatList, StyleSheet, Image, SafeAreaView, Dimensions} from 'react-native';
 import {IdeList} from '../data/Ide'
-import {HorizontalList} from '../components/ListComponents'
+import {HorizontalList} from '../components/ListComponents';
+import {Navbar} from '../components/Navbar';
 
 
 class Ide extends React.Component{
@@ -13,6 +14,7 @@ class Ide extends React.Component{
     {
         return(
             <SafeAreaView style={styles.container}>
+               <Navbar toggleHandler={this.props.navigation.openDrawer} content="IDE"/>     
                <HorizontalList data={IdeList}/>
             </SafeAreaView>     
             );
