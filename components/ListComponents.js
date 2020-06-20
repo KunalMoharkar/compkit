@@ -50,7 +50,6 @@ const styles = StyleSheet.create({
         borderBottomWidth:0,
         borderWidth:6,
         backgroundColor:'#d1cbcd',
-        opacity:0.1,
     },
     image:{
         height:250,
