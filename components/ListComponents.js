@@ -4,10 +4,14 @@ import {View, Text, StyleSheet, Dimensions, FlatList, Image} from 'react-native'
 const HorizontalListItem=(props)=>{
 
     return(
+    <View>
     <View style={styles.itemContainer}>
         <Image style={styles.image} source={props.data.source}></Image>
-        <Text style={styles.imageText}>{props.data.name}</Text>
     </View>  
+    <View style={styles.imageTextContainer}>
+        <Text style={styles.imageText}>{props.data.name}</Text>
+    </View>
+    </View>
     )  
 
 }
@@ -32,6 +36,7 @@ const styles = StyleSheet.create({
         alignItems:"center",
     },
     itemContainer:{
+        
         display:'flex',
         alignItems:'center',
         justifyContent:'center',
@@ -39,19 +44,24 @@ const styles = StyleSheet.create({
         height:Math.round(Dimensions.get('window').width), 
         marginLeft:10,
         marginRight:10,
-        borderRadius:10,
-        elevation:24,
-        shadowOffset: { width:2 , height: 2 },
-        shadowColor: 'black',
-        shadowOpacity: 0.1,
-        shadowRadius:20,
-        elevation: 6,
+        borderRadius:Math.round(Dimensions.get('window').width)/2,
+        borderColor:'grey',
+        borderTopWidth:0,
+        borderBottomWidth:0,
+        borderWidth:6,
+        backgroundColor:'#d1cbcd',
+        opacity:0.1,
     },
     image:{
         height:250,
         width:250,
         resizeMode:'contain',
         
+    },
+    imageTextContainer:{
+        display:'flex',
+        alignItems:'center',
+        justifyContent:'center',
     },
     imageText:{
         fontSize:40,
