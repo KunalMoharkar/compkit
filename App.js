@@ -1,15 +1,15 @@
 import * as React from 'react';
 import { Button, View } from 'react-native';
 import { createDrawerNavigator} from '@react-navigation/drawer';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer} from '@react-navigation/native';
 import Quotes from './screens/Quotes';
 import Competitive from './screens/Competitive';
-import Frontend from './screens/Frontend';
 import Backend from './screens/Backend';
 import Appdev from './screens/Appdev';
 import Database from './screens/Database';
 import Editors from './screens/Editors';
-import Ide from './screens/Ide';
+import Libraries from './screens/Libraries';
+import Utilities from './screens/Utilities';
 
 
 function HomeScreen({ navigation }) {
@@ -48,12 +48,12 @@ export default function App() {
         <Drawer.Screen name="Home" component={HomeScreen} />
         <Drawer.Screen name="Quotes" component={Quotes} />
         <Drawer.Screen name="Competitive" component={Competitive}/>
-        <Drawer.Screen name="Backend" component={Backend}/>
-        <Drawer.Screen name="Frontend" component={Frontend}/>
+        <Drawer.Screen name="Web" component={Backend}/>
         <Drawer.Screen name="Mobile" component={Appdev}/>
         <Drawer.Screen name="Database" component={Database}/>
         <Drawer.Screen name="Editors" component={Editors}/>
-        <Drawer.Screen name="IDE" component={Ide}/>
+        <Drawer.Screen name="Libraries" component={Libraries}/>
+        <Drawer.Screen name="Utilities" component={Utilities}/>
 
       </Drawer.Navigator>
     </NavigationContainer>

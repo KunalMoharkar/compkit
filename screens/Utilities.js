@@ -1,11 +1,10 @@
 import React from 'react';
 import {Text, View, Button, FlatList, StyleSheet, Image, SafeAreaView, Dimensions} from 'react-native';
-import {IdeList} from '../data/Ide'
-import {HorizontalList} from '../components/ListComponents';
+import {UtilityList} from '../data/Utilities'
+import {HorizontalList} from '../components/ListComponents'
 import {Navbar} from '../components/Navbar';
 
-
-class Ide extends React.Component{
+class Utilities extends React.Component{
 
     constructor(props){
         super(props);
@@ -14,8 +13,8 @@ class Ide extends React.Component{
     {
         return(
             <SafeAreaView style={styles.container}>
-               <Navbar toggleHandler={this.props.navigation.openDrawer} content="IDE"/>     
-               <HorizontalList data={IdeList}/>
+                <Navbar toggleHandler={this.props.navigation.openDrawer} content="Utilities"/>  
+               <HorizontalList data={UtilityList}/>
             </SafeAreaView>     
             );
     }
@@ -34,4 +33,4 @@ const styles = StyleSheet.create({
 
 
 
-export default Ide;
+export default Utilities;

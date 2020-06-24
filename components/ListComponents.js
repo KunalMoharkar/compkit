@@ -1,5 +1,7 @@
 import React from 'react';
-import {View, Text, StyleSheet, Dimensions, FlatList, Image} from 'react-native';
+import {View, Text, StyleSheet, Dimensions, FlatList, Image, TouchableOpacity,Linking} from 'react-native';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import {faExternalLinkAlt} from '@fortawesome/free-solid-svg-icons';
 
 const HorizontalListItem=(props)=>{
 
@@ -10,6 +12,7 @@ const HorizontalListItem=(props)=>{
     </View>  
     <View style={styles.imageTextContainer}>
         <Text style={styles.imageText}>{props.data.name}</Text>
+        <TouchableOpacity style={styles.iconContainer} onPress={() => Linking.openURL(props.data.url)}><FontAwesomeIcon icon={faExternalLinkAlt} color={'blue'} size={32} /></TouchableOpacity>
     </View>
     </View>
     )  
@@ -59,11 +62,19 @@ const styles = StyleSheet.create({
     },
     imageTextContainer:{
         display:'flex',
+        flexDirection:'row',
         alignItems:'center',
         justifyContent:'center',
     },
     imageText:{
         fontSize:40,
         fontFamily:'monospace',
-    }
+    },
+    iconContainer:{
+        display:'flex',
+        alignItems:'center',
+        alignSelf:'center',
+        justifyContent:'center',
+        paddingLeft:10,
+    },
 })

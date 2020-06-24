@@ -1,11 +1,12 @@
 import React from 'react';
 import {Text, View, Button, FlatList, StyleSheet, Image, SafeAreaView, Dimensions} from 'react-native';
-import {FrontendList} from '../data/Frontend'
-import {HorizontalList} from '../components/ListComponents';
+import {LibraryList} from '../data/Libraries'
+import {HorizontalList} from '../components/ListComponents'
 import {Navbar} from '../components/Navbar';
 
 
-class Frontend extends React.Component{
+
+class Libraries extends React.Component{
 
     constructor(props){
         super(props);
@@ -14,8 +15,8 @@ class Frontend extends React.Component{
     {
         return(
             <SafeAreaView style={styles.container}>
-              <Navbar toggleHandler={this.props.navigation.openDrawer} content="Frontend"/>    
-               <HorizontalList data={FrontendList}/>
+                <Navbar toggleHandler={this.props.navigation.openDrawer} content="Libraries"/>  
+               <HorizontalList data={LibraryList}/>
             </SafeAreaView>     
             );
     }
@@ -34,4 +35,4 @@ const styles = StyleSheet.create({
 
 
 
-export default Frontend;
+export default Libraries;
