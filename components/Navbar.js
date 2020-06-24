@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, Button, StyleSheet, TouchableOpacity} from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faCoffee, faToggleOn, faBars } from '@fortawesome/free-solid-svg-icons';
+import {faBars } from '@fortawesome/free-solid-svg-icons';
 import Constants from 'expo-constants';
 
 export const Navbar=(props)=>{
@@ -11,7 +11,8 @@ export const Navbar=(props)=>{
                  <Text style={styles.text}>{props.content}</Text>
             </View>
             <TouchableOpacity onPress={props.toggleHandler} style={styles.iconContainer}>
-                 <FontAwesomeIcon icon={faBars} color={'grey'} size={40}/>
+       
+                 <FontAwesomeIcon icon={faBars} color={'crimson'} size={40}/>
             </TouchableOpacity>
         </View>    
     )

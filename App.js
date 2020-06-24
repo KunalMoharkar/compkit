@@ -10,6 +10,7 @@ import Database from './screens/Database';
 import Editors from './screens/Editors';
 import Libraries from './screens/Libraries';
 import Utilities from './screens/Utilities';
+import Misc from './screens/Misc';
 
 
 function HomeScreen({ navigation }) {
@@ -54,6 +55,7 @@ export default function App() {
         <Drawer.Screen name="Editors" component={Editors}/>
         <Drawer.Screen name="Libraries" component={Libraries}/>
         <Drawer.Screen name="Utilities" component={Utilities}/>
+        <Drawer.Screen name="Misc" component={Misc}/>
 
       </Drawer.Navigator>
     </NavigationContainer>

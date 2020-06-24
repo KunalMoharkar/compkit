@@ -48,11 +48,11 @@ const styles = StyleSheet.create({
         marginLeft:10,
         marginRight:10,
         borderRadius:Math.round(Dimensions.get('window').width)/2,
-        borderColor:'grey',
+        borderColor:'black',
         borderTopWidth:0,
         borderBottomWidth:0,
         borderWidth:6,
-        backgroundColor:'#d1cbcd',
+
     },
     image:{
         height:250,

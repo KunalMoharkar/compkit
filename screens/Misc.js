@@ -1,12 +1,10 @@
 import React from 'react';
-import {Text, View, Button, FlatList, StyleSheet, Image, SafeAreaView, Dimensions} from 'react-native';
-import {BackendList} from '../data/Backend'
+import {StyleSheet, Image, SafeAreaView, Dimensions} from 'react-native';
+import {MiscList} from '../data/Misc'
 import {HorizontalList} from '../components/ListComponents'
 import {Navbar} from '../components/Navbar';
 
-
-
-class Backend extends React.Component{
+class Misc extends React.Component{
 
     constructor(props){
         super(props);
@@ -15,8 +13,8 @@ class Backend extends React.Component{
     {
         return(
             <SafeAreaView style={styles.container}>
-                <Navbar toggleHandler={this.props.navigation.openDrawer} content="Web"/> 
-               <HorizontalList data={BackendList}/>
+                <Navbar toggleHandler={this.props.navigation.openDrawer} content="Miscellaneous"/>  
+               <HorizontalList data={MiscList}/>
             </SafeAreaView>     
             );
     }
@@ -29,9 +27,10 @@ const styles = StyleSheet.create({
         alignItems:'center',
         justifyContent:'center',
     },
+
 })
 
 
 
 
-export default Backend;
+export default Misc;

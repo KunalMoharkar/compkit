@@ -1,5 +1,6 @@
 import React from 'react';
 import {FlatList, Text , View, StyleSheet, SafeAreaView} from 'react-native';
+import {Navbar} from '../components/Navbar';
 import Constants from 'expo-constants';
 
  const Item=({title})=>{
@@ -28,7 +29,7 @@ class Quotes extends React.Component{
 
      async componentDidMount() {
         
-      const response = await fetch('https://programming-quotes-api.herokuapp.com/quotes/page/2');
+      const response = await fetch('https://programming-quotes-api.herokuapp.com/quotes');
       const json = await response.json();
       this.setState({ data: json });
   
@@ -38,8 +39,8 @@ class Quotes extends React.Component{
     render(){
     return (
         <SafeAreaView style={styles.container}>
+          <Navbar toggleHandler={this.props.navigation.openDrawer} content="Quotes"/>  
           <FlatList
-            ListHeaderComponent = {Header}
             data={this.state.data}
             renderItem={({ item }) => <Item title={item.en} />}
             keyExtractor={item => item.id}
@@ -52,24 +53,24 @@ class Quotes extends React.Component{
 
 const styles = StyleSheet.create({
     container: {
+      display:'flex',
       flex: 1,
-      marginTop: Constants.statusBarHeight,
-      backgroundColor:'#303133',
+      justifyContent:'center',
+      alignItems:'center',
     },
     item: {
-      backgroundColor: 'black',
+      backgroundColor: '#c1c3c7',
       padding: 10,
-      borderBottomColor:'#d6156c',
-      borderBottomWidth:2,
+      borderBottomColor:'#7d8085',
+      borderRadius:3,
+      borderBottomWidth:5,
       marginTop:8,
       marginBottom:8,
       marginLeft:2,
       marginRight:2,
-
     },
     title: {
       fontSize: 18,
-      color:'white',
     },
   });
   
