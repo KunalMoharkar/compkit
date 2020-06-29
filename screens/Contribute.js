@@ -42,7 +42,7 @@ class Contribute extends React.Component
                 </View>
                </View>
            </View> 
-             <TouchableOpacity style={styles.opensourceContainer} onPress={() => Linking.openURL("https://github.com/KunalMoharkar/compkit")}>
+             <TouchableOpacity style={styles.opensourceContainer} onPress={() => Linking.openURL()}>
               <FontAwesomeIcon icon={faGithub} size={24} />
               <Text style={styles.opensourceText}> 
               Open sourced at github
