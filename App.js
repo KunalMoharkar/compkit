@@ -11,18 +11,8 @@ import Editors from './screens/Editors';
 import Libraries from './screens/Libraries';
 import Utilities from './screens/Utilities';
 import Misc from './screens/Misc';
-
-
-function HomeScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Button
-      
-        title="Home"
-      />
-    </View>
-  );
-}
+import Home from './screens/Home';
+import Contribute from "./screens/Contribute";
 
 
 
@@ -33,7 +23,6 @@ export default function App() {
     <NavigationContainer>
       <Drawer.Navigator 
       initialRouteName="Home"
-      hideStatusBar="true"
       drawerStyle={{
         backgroundColor: 'black',
         width:240
@@ -46,7 +35,7 @@ export default function App() {
         }
       }}
       >
-        <Drawer.Screen name="Home" component={HomeScreen} />
+        <Drawer.Screen name="Home" component={Home} />
         <Drawer.Screen name="Quotes" component={Quotes} />
         <Drawer.Screen name="Competitive" component={Competitive}/>
         <Drawer.Screen name="Web" component={Backend}/>
@@ -56,6 +45,8 @@ export default function App() {
         <Drawer.Screen name="Libraries" component={Libraries}/>
         <Drawer.Screen name="Utilities" component={Utilities}/>
         <Drawer.Screen name="Misc" component={Misc}/>
+        <Drawer.Screen name="Contribute" component={Contribute}/>
+    
 
       </Drawer.Navigator>
     </NavigationContainer>

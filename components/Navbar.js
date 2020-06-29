@@ -21,7 +21,7 @@ export const Navbar=(props)=>{
 const styles = StyleSheet.create({
 
     text:{
-        color:'white',
+        color:'#e91e63',
         fontSize:30,
         fontFamily:'Roboto',
     },
@@ -31,7 +31,6 @@ const styles = StyleSheet.create({
         alignSelf:'stretch',
         justifyContent:'space-between',
         backgroundColor:'black',
-        marginTop: Constants.statusBarHeight,
         padding:5,
     },
     iconContainer:{

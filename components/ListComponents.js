@@ -13,7 +13,7 @@ const HorizontalListItem=(props)=>{
     <View style={styles.imageTextContainer}>
         <Text style={styles.imageText}>{props.data.name}</Text>
         <TouchableOpacity style={styles.iconContainer} onPress={() => Linking.openURL(props.data.url)}><FontAwesomeIcon icon={faExternalLinkAlt} color={'blue'} size={32} /></TouchableOpacity>
-    </View>
+    </View> 
     </View>
     )  
 
@@ -77,4 +77,5 @@ const styles = StyleSheet.create({
         justifyContent:'center',
         paddingLeft:10,
     },
+   
 })
